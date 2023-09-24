@@ -1,6 +1,6 @@
 {
-  "name": "inspector-api",
-  "version": "1.4.7",
+  "name": "@deepzua/inspector-api",
+  "version": "1.5.0",
   "main": "index.js",
   "bin": "./index.js",
   "types": "./index.d.ts",
@@ -33,7 +33,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wallet77/v8-inspector-api.git"
+    "url": "git+https://github.com/DeepzUa/v8-inspector-api.git"
   },
   "author": "wallet77",
   "license": "MIT",

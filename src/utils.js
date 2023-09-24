@@ -1,10 +1,8 @@
 const fs = require('fs').promises
-const os = require('os')
 
 const writeData = async (data, fileName, config, s3Client) => {
     if (config.storage.type === 'fs') {
-        const tmpDir = os.tmpdir()
-        await fs.writeFile(`${tmpDir}/${fileName}`, JSON.stringify(data))
+        await fs.writeFile(`${config.storage.dir}/${fileName}`, JSON.stringify(data))
     } else if (config.storage.type === 's3') {
         const { PutObjectCommand } = require('@aws-sdk/client-s3')
         const params = {
